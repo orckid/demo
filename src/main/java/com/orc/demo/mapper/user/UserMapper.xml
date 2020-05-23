@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.orc.demo.mapper.user.UserMapper">
+    <insert id="add" parameterType="com.orc.demo.common.User">
+        INSERT INTO user (userName,email,registerDate,info)
+        values (#{user.userName}, #{user.email}, now(), #{user.info})
+    </insert>
+    <update id="update">
+        update user set phone = #{phone}, address = #{address} where userName = #{userName}
+    </update>
+    <delete id="deleteUser">
+        DELETE FROM user WHERE userName = #{userName}
+    </delete>
+    <select id="queryUser" resultType="com.orc.demo.common.User">
+        SELECT * FROM user WHERE userName = #{userName}
+    </select>
+</mapper>
