@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 
 /**
- * Controller
+ * Controller类
  * @author orckid
  */
 @Controller
