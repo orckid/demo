@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn">
+<head>
+    <title>管理系统</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="/static/vendor/bootstrap/css/bootstrap.css">
+
+    <style type="text/css">
+        .login_background {
+            width: 100%;
+            background: url("../static/image/login.jpg") no-repeat center fixed;
+            background-size: cover;
+        }
+        .login_label_container {
+            width: 100%;
+            height: 200px;
+            background: rgba(52,126,188,0.7);
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        .login_label {
+            position: relative;
+            height: 100%;
+            padding: 0 50% 0 15%;
+            text-align: center;
+        }
+        .login_label_body {
+            color: #fff;
+            padding: 30px 0 10px 0;
+            height: 100%;
+        }
+        .label_title {
+            font-size: 4em;
+            height: 65%;
+        }
+        .label_description {
+            font-size: 2em;
+            height: 35%;
+        }
+        .login_form {
+            width: 375px;
+            height: 337px;
+            background: #fff;
+            position: fixed;
+            left: 40%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0 0 50px rgba(0,0,0,0.4);
+            border-radius: 5px;
+            padding: 20px 35px 20px 35px;
+            font-size: 16px;
+        }
+        .login_form_title {
+            width: 100%;
+            height: 35px;
+            color: #347ebc;
+            font-size: 24px;
+            text-align: center;
+            margin:  20px 0 30px 0;
+            letter-spacing: 10px;
+        }
+    </style>
+</head>
+<body class="login_background">
+    <div class="login_label_container">
+        <div class="login_label">
+            <div class="login_label_body">
+                <div class="label_title">后台管理系统</div>
+                <div class="label_description">后台管理系统</div>
+            </div>
+        </div>
+    </div>
+    <div class="container login_form">
+        <div class="row">
+            <div class="login_form_title">用户登录</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form id="user_login_form" class="form-horizontal">
+                    <div class="form-group">
+                        <label for="username" class="col-md-3 control-label">
+                            <span>用户名:</span>
+                        </label>
+                        <div class="col-md-9 col-xs-3">
+                            <input id="username" type="text" name="username" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-md-3 control-label">
+                            <span>密&nbsp;&nbsp;&nbsp;&nbsp;码:</span>
+                        </label>
+                        <div class="col-md-9 col-xs-3">
+                            <input id="password" type="text" name="password" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group hidden">
+                        <label class="col-xs-3 control-label">验证码：</label>
+                        <div class="col-xs-5">
+                            <label>
+                                <input type="text" class="form-control" />
+                            </label>
+                        </div>
+                        <div class="col-xs-4">
+                            <label>
+                                <input type="text" class="form-control" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <a onclick="userLogin();" class="btn btn-primary col-xs-12">登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/static/vendor/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/static/js/login.js"></script>
+</body>
+</html>

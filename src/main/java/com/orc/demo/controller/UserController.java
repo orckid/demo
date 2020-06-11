@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author orckid
  */
 @Controller
+@RequestMapping("/user")
 public class UserController {
     private static final Logger LOG = LoggerFactory.getLogger(UserController.class);
 

@@ -22,7 +22,7 @@ public class AutoInterceptor implements HandlerInterceptor {
     private static final Logger LOG = LoggerFactory.getLogger(AutoInterceptor.class);
 
     @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
         if (!(handler instanceof HandlerMethod)) {
             return true;
         }
@@ -30,6 +30,9 @@ public class AutoInterceptor implements HandlerInterceptor {
         Method method = handlerMethod.getMethod();
 
         LogAnnotation annotation = method.getAnnotation(LogAnnotation.class);
+
+        String param = request.getQueryString();
+        LOG.info("参数：{}", param);
 
         /*if (annotation == null) {
             LOG.info("方法上没有注解，禁止访问....");
