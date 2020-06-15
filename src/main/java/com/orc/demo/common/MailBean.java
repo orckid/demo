@@ -8,7 +8,7 @@ public class MailBean {
     /**
      * 收件人
       */
-    private String mailTo;
+    private String[] mailTo;
 
     /**
      * 邮件标题
@@ -23,17 +23,17 @@ public class MailBean {
     public MailBean() {
     }
 
-    public MailBean(String mailTo, String subject, String content) {
+    public MailBean(String[] mailTo, String subject, String content) {
         this.mailTo = mailTo;
         this.subject = subject;
         this.content = content;
     }
 
-    public String getMailTo() {
+    public String[] getMailTo() {
         return mailTo;
     }
 
-    public void setMailTo(String mailTo) {
+    public void setMailTo(String[] mailTo) {
         this.mailTo = mailTo;
     }
 
